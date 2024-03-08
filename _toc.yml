@@ -4,6 +4,13 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: tenta-200605.ipynb
+#- file: tenta-200814.ipynb
+#- file: tenta-2021-06-01.ipynb
+#- file: tenta-2021-08-20.ipynb
+#- file: tenta-2022-03-17.ipynb
+#- file: tenta-2022-06-01.ipynb
+- file: omtenta-2022-06-10.ipynb
+#- file: Omtenta-2022-08-19.ipynb
+#- file: tenta-2023-03-17.ipynb
+#- file: tenta-2023-06-09.ipynb
