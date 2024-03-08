@@ -1,0 +1,786 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Part 1 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tenta-200814';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Exams
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tenta-200605.html">Tenta 2020-06-05</a></li>
+<li class="toctree-l1"><a class="reference internal" href="omtenta-2022-06-10.html">Tenta BB1000 2022-06-10</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftenta-200814.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tenta-200814.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Part 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Part 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-email-data">1 Reading email data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pass-emails-to-a-mail-program">2 Pass emails to a mail program</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-employee-class">1. An employee class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-representation">2. Text representation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3">Part 3</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reusing-employee">1. Reusing Employee</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtered-sendlist">2. filtered sendlist</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Before you turn this problem in, make sure everything runs as expected. First, <strong>restart the kernel</strong> (in the menubar, select Kernel<span class="math notranslate nohighlight">\(\rightarrow\)</span>Restart) and then <strong>run all cells</strong> (in the menubar, select Cell<span class="math notranslate nohighlight">\(\rightarrow\)</span>Run All).</p>
+<p>Make sure you fill in any place that says <code class="docutils literal notranslate"><span class="pre">YOUR</span> <span class="pre">CODE</span> <span class="pre">HERE</span></code> or “YOUR ANSWER HERE”, as well as your name and collaborators below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="part-1">
+<h1>Part 1<a class="headerlink" href="#part-1" title="Link to this heading">#</a></h1>
+<section id="reading-email-data">
+<h2>1 Reading email data<a class="headerlink" href="#reading-email-data" title="Link to this heading">#</a></h2>
+<p>Consider the file written below as staff.csv. It is a CSV-file (comma-separated values) with random personal data:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1,Conn,De Gregoli,cdegregoli0@epa.gov,&quot;Kunze, Crona and Bergnaum&quot;
+2,Anette,Stutt,astutt1@oracle.com,Kuhlman LLC
+3,Eberto,Herkess,eherkess2@google.com.au,Russel Inc
+4,Montgomery,Dublin,mdublin3@dion.ne.jp,Gulgowski Group
+5,Jenilee,Readwing,jreadwing4@craigslist.org,Hansen and Sons
+6,Brit,Scattergood,bscattergood5@wiley.com,Greenholt and Sons
+7,Abby,Minkin,aminkin6@purevolume.com,&quot;Krajcik, Reichert and MacGyver&quot;
+8,Aleda,Bradburne,abradburne7@quantcast.com,&quot;Hintz, Lang and Koepp&quot;
+9,Abramo,Shoemark,ashoemark8@yahoo.co.jp,&quot;O&#39;Keefe, Morissette and Erdman&quot;
+10,Inness,Gibbins,igibbins9@geocities.com,Bartell Inc
+</pre></div>
+</div>
+<p>Create a function <code class="docutils literal notranslate"><span class="pre">extract_emails</span></code> that takes a filename as input and returns a list of strings containing the email-addresses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">extract_emails</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="c1"># YOUR CODE HERE</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="c1"># YOUR CODE HERE</span>
+                    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: incomplete input
+</pre></div>
+</div>
+</div>
+</div>
+<p>We first verify the behaviour of a single-line file, then with the full staff file</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> &#39;first.csv&#39;
+<span class="mi">1</span><span class="p">,</span><span class="n">Conn</span><span class="p">,</span><span class="n">De</span> <span class="n">Gregoli</span><span class="p">,</span><span class="n">cdegregoli0</span><span class="nd">@epa</span><span class="o">.</span><span class="n">gov</span><span class="p">,</span><span class="s2">&quot;Kunze, Crona and Bergnaum&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> &#39;staff.csv&#39;
+<span class="mi">1</span><span class="p">,</span><span class="n">Conn</span><span class="p">,</span><span class="n">De</span> <span class="n">Gregoli</span><span class="p">,</span><span class="n">cdegregoli0</span><span class="nd">@epa</span><span class="o">.</span><span class="n">gov</span><span class="p">,</span><span class="s2">&quot;Kunze, Crona and Bergnaum&quot;</span>
+<span class="mi">2</span><span class="p">,</span><span class="n">Anette</span><span class="p">,</span><span class="n">Stutt</span><span class="p">,</span><span class="n">astutt1</span><span class="nd">@oracle</span><span class="o">.</span><span class="n">com</span><span class="p">,</span><span class="n">Kuhlman</span> <span class="n">LLC</span>
+<span class="mi">3</span><span class="p">,</span><span class="n">Eberto</span><span class="p">,</span><span class="n">Herkess</span><span class="p">,</span><span class="n">eherkess2</span><span class="nd">@google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">au</span><span class="p">,</span><span class="n">Russel</span> <span class="n">Inc</span>
+<span class="mi">4</span><span class="p">,</span><span class="n">Montgomery</span><span class="p">,</span><span class="n">Dublin</span><span class="p">,</span><span class="n">mdublin3</span><span class="nd">@dion</span><span class="o">.</span><span class="n">ne</span><span class="o">.</span><span class="n">jp</span><span class="p">,</span><span class="n">Gulgowski</span> <span class="n">Group</span>
+<span class="mi">5</span><span class="p">,</span><span class="n">Jenilee</span><span class="p">,</span><span class="n">Readwing</span><span class="p">,</span><span class="n">jreadwing4</span><span class="nd">@craigslist</span><span class="o">.</span><span class="n">org</span><span class="p">,</span><span class="n">Hansen</span> <span class="ow">and</span> <span class="n">Sons</span>
+<span class="mi">6</span><span class="p">,</span><span class="n">Brit</span><span class="p">,</span><span class="n">Scattergood</span><span class="p">,</span><span class="n">bscattergood5</span><span class="nd">@wiley</span><span class="o">.</span><span class="n">com</span><span class="p">,</span><span class="n">Greenholt</span> <span class="ow">and</span> <span class="n">Sons</span>
+<span class="mi">7</span><span class="p">,</span><span class="n">Abby</span><span class="p">,</span><span class="n">Minkin</span><span class="p">,</span><span class="n">aminkin6</span><span class="nd">@purevolume</span><span class="o">.</span><span class="n">com</span><span class="p">,</span><span class="s2">&quot;Krajcik, Reichert and MacGyver&quot;</span>
+<span class="mi">8</span><span class="p">,</span><span class="n">Aleda</span><span class="p">,</span><span class="n">Bradburne</span><span class="p">,</span><span class="n">abradburne7</span><span class="nd">@quantcast</span><span class="o">.</span><span class="n">com</span><span class="p">,</span><span class="s2">&quot;Hintz, Lang and Koepp&quot;</span>
+<span class="mi">9</span><span class="p">,</span><span class="n">Abramo</span><span class="p">,</span><span class="n">Shoemark</span><span class="p">,</span><span class="n">ashoemark8</span><span class="nd">@yahoo</span><span class="o">.</span><span class="n">co</span><span class="o">.</span><span class="n">jp</span><span class="p">,</span><span class="s2">&quot;O&#39;Keefe, Morissette and Erdman&quot;</span>
+<span class="mi">10</span><span class="p">,</span><span class="n">Inness</span><span class="p">,</span><span class="n">Gibbins</span><span class="p">,</span><span class="n">igibbins9</span><span class="nd">@geocities</span><span class="o">.</span><span class="n">com</span><span class="p">,</span><span class="n">Bartell</span> <span class="n">Inc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">extract_emails</span><span class="p">(</span><span class="s1">&#39;first.csv&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;cdegregoli0@epa.gov&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">extract_emails</span><span class="p">(</span><span class="s1">&#39;staff.csv&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span>
+    <span class="s1">&#39;cdegregoli0@epa.gov&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;astutt1@oracle.com&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;eherkess2@google.com.au&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;mdublin3@dion.ne.jp&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;jreadwing4@craigslist.org&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;bscattergood5@wiley.com&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;aminkin6@purevolume.com&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;abradburne7@quantcast.com&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;ashoemark8@yahoo.co.jp&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;igibbins9@geocities.com&#39;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pass-emails-to-a-mail-program">
+<h2>2 Pass emails to a mail program<a class="headerlink" href="#pass-emails-to-a-mail-program" title="Link to this heading">#</a></h2>
+<p>Reformat the output <code class="docutils literal notranslate"><span class="pre">extract_emails</span></code> to have email addresses as a string separated by a semicolon</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendmail_format</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="c1"># YOUR CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">sendmail_format</span><span class="p">(</span><span class="s1">&#39;first.csv&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;cdegregoli0@epa.gov&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">sendmail_format</span><span class="p">(</span><span class="s1">&#39;staff.csv&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;cdegregoli0@epa.gov; astutt1@oracle.com; eherkess2@google.com.au; mdublin3@dion.ne.jp; jreadwing4@craigslist.org; bscattergood5@wiley.com; aminkin6@purevolume.com; abradburne7@quantcast.com; ashoemark8@yahoo.co.jp; igibbins9@geocities.com&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="part-2">
+<h1>Part 2<a class="headerlink" href="#part-2" title="Link to this heading">#</a></h1>
+<section id="an-employee-class">
+<h2>1. An employee class<a class="headerlink" href="#an-employee-class" title="Link to this heading">#</a></h2>
+<p>A class initializer taker as input a line of the same format as in the staff file of part 1. Define instance attributes for the class such that the test cells are valid</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">:</span>
+    <span class="c1"># YOUR CODE HERE</span>
+
+<span class="n">employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s1">&#39;1,Conn,De Gregoli,cdegregoli0@epa.gov,&quot;Kunze, Crona and Bergnaum&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">employee</span><span class="o">.</span><span class="n">first</span> <span class="o">==</span> <span class="s1">&#39;Conn&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">employee</span><span class="o">.</span><span class="n">last</span> <span class="o">==</span> <span class="s1">&#39;De Gregoli&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">employee</span><span class="o">.</span><span class="n">email</span> <span class="o">==</span> <span class="s1">&#39;cdegregoli0@epa.gov&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="text-representation">
+<h2>2. Text representation<a class="headerlink" href="#text-representation" title="Link to this heading">#</a></h2>
+<p>Mail programs accept mail receiver in the format “first last <email>”. Update the Employee class with a function such that</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>str(employee) == &#39;Conn De Gregoli &lt;cdegregoli&gt;&#39;
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">employee</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Conn De Gregoli &lt;cdegregoli0@epa.gov&gt;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="part-3">
+<h1>Part 3<a class="headerlink" href="#part-3" title="Link to this heading">#</a></h1>
+<section id="reusing-employee">
+<h2>1. Reusing Employee<a class="headerlink" href="#reusing-employee" title="Link to this heading">#</a></h2>
+<p>Reuse the class definition Employee of part 2 (copy-paste your previous solution) and the staff file</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">:</span>
+    <span class="c1"># YOUR CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> &#39;staff.csv&#39;
+<span class="mi">1</span><span class="p">,</span><span class="n">Conn</span><span class="p">,</span><span class="n">De</span> <span class="n">Gregoli</span><span class="p">,</span><span class="n">cdegregoli0</span><span class="nd">@epa</span><span class="o">.</span><span class="n">gov</span><span class="p">,</span><span class="s2">&quot;Kunze, Crona and Bergnaum&quot;</span>
+<span class="mi">2</span><span class="p">,</span><span class="n">Anette</span><span class="p">,</span><span class="n">Stutt</span><span class="p">,</span><span class="n">astutt1</span><span class="nd">@oracle</span><span class="o">.</span><span class="n">com</span><span class="p">,</span><span class="n">Kuhlman</span> <span class="n">LLC</span>
+<span class="mi">3</span><span class="p">,</span><span class="n">Eberto</span><span class="p">,</span><span class="n">Herkess</span><span class="p">,</span><span class="n">eherkess2</span><span class="nd">@google</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">au</span><span class="p">,</span><span class="n">Russel</span> <span class="n">Inc</span>
+<span class="mi">4</span><span class="p">,</span><span class="n">Montgomery</span><span class="p">,</span><span class="n">Dublin</span><span class="p">,</span><span class="n">mdublin3</span><span class="nd">@dion</span><span class="o">.</span><span class="n">ne</span><span class="o">.</span><span class="n">jp</span><span class="p">,</span><span class="n">Gulgowski</span> <span class="n">Group</span>
+<span class="mi">5</span><span class="p">,</span><span class="n">Jenilee</span><span class="p">,</span><span class="n">Readwing</span><span class="p">,</span><span class="n">jreadwing4</span><span class="nd">@craigslist</span><span class="o">.</span><span class="n">org</span><span class="p">,</span><span class="n">Hansen</span> <span class="ow">and</span> <span class="n">Sons</span>
+<span class="mi">6</span><span class="p">,</span><span class="n">Brit</span><span class="p">,</span><span class="n">Scattergood</span><span class="p">,</span><span class="n">bscattergood5</span><span class="nd">@wiley</span><span class="o">.</span><span class="n">com</span><span class="p">,</span><span class="n">Greenholt</span> <span class="ow">and</span> <span class="n">Sons</span>
+<span class="mi">7</span><span class="p">,</span><span class="n">Abby</span><span class="p">,</span><span class="n">Minkin</span><span class="p">,</span><span class="n">aminkin6</span><span class="nd">@purevolume</span><span class="o">.</span><span class="n">com</span><span class="p">,</span><span class="s2">&quot;Krajcik, Reichert and MacGyver&quot;</span>
+<span class="mi">8</span><span class="p">,</span><span class="n">Aleda</span><span class="p">,</span><span class="n">Bradburne</span><span class="p">,</span><span class="n">abradburne7</span><span class="nd">@quantcast</span><span class="o">.</span><span class="n">com</span><span class="p">,</span><span class="s2">&quot;Hintz, Lang and Koepp&quot;</span>
+<span class="mi">9</span><span class="p">,</span><span class="n">Abramo</span><span class="p">,</span><span class="n">Shoemark</span><span class="p">,</span><span class="n">ashoemark8</span><span class="nd">@yahoo</span><span class="o">.</span><span class="n">co</span><span class="o">.</span><span class="n">jp</span><span class="p">,</span><span class="s2">&quot;O&#39;Keefe, Morissette and Erdman&quot;</span>
+<span class="mi">10</span><span class="p">,</span><span class="n">Inness</span><span class="p">,</span><span class="n">Gibbins</span><span class="p">,</span><span class="n">igibbins9</span><span class="nd">@geocities</span><span class="o">.</span><span class="n">com</span><span class="p">,</span><span class="n">Bartell</span> <span class="n">Inc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use the map function to generate a list of Employee objects</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">read_list_of_employees</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="c1"># YOUR CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## empty file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;empty.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">assert</span> <span class="n">read_list_of_employees</span><span class="p">(</span><span class="s1">&#39;empty.csv&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">read_list_of_employees</span><span class="p">(</span><span class="s1">&#39;staff.csv&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">first</span> <span class="o">==</span> <span class="s1">&#39;Conn&#39;</span>
+<span class="k">assert</span> <span class="n">read_list_of_employees</span><span class="p">(</span><span class="s1">&#39;staff.csv&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">first</span> <span class="o">==</span> <span class="s1">&#39;Anette&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="filtered-sendlist">
+<h2>2. filtered sendlist<a class="headerlink" href="#filtered-sendlist" title="Link to this heading">#</a></h2>
+<p>Use the filter function to extract the employees with a japanese email address and generate the sendlist.</p>
+<p>Hint: you need a function that returns True of False depending on the address ends with ‘.jp’ or not</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">japan_sendlist</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">employees</span> <span class="o">=</span> <span class="n">read_list_of_employees</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="c1"># YOUR CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">japan_sendlist</span><span class="p">(</span><span class="s1">&#39;empty.csv&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">japan_sendlist</span><span class="p">(</span><span class="s1">&#39;staff.csv&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Montgomery Dublin &lt;mdublin3@dion.ne.jp&gt;: Abramo Shoemark &lt;ashoemark8@yahoo.co.jp&gt;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Part 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-email-data">1 Reading email data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pass-emails-to-a-mail-program">2 Pass emails to a mail program</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-employee-class">1. An employee class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-representation">2. Text representation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3">Part 3</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reusing-employee">1. Reusing Employee</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtered-sendlist">2. filtered sendlist</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
