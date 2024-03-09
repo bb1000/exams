@@ -731,6 +731,15 @@ We implement that with the <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 </div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>Lower than or equal (&lt;=) is implemented by the <code class="docutils literal notranslate"><span class="pre">__le__</span></code> method</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="fm">__le__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">to_pence</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">to_pence</span><span class="p">(</span><span class="o">*</span><span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 
