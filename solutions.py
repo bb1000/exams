@@ -129,10 +129,7 @@ class GBP:
             raise NegativePounds
 
     def __iter__(self):
-        pounds, shillings, pence = self.data
-        yield pounds
-        yield shillings
-        yield pence
+        return iter(self.data)
 
     def __add__(self, other):
         # 6. Define addition (simple version)
