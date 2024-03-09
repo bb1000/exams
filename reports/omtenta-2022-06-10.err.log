@@ -18,19 +18,25 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-assert reduce(0, 0, 13) == (0, 1, 1), f'{reduce(0, 0, 13)} != (0, 1, 1)'
-assert reduce(0, 0, 245) == (1, 0, 5), f'{reduce(0, 0, 245)} != (1, 0, 5)'
-assert reduce(0, 0, 252) == (1, 1, 0), f'{reduce(0, 0, 252)} != (1, 1, 0)'
+assert GBP(1, -19, 0) == GBP(0, 1, 0) # This is fine
 
+import pytest
+with pytest.raises(NegativePounds):
+    GBP(1, -21, 0) # Not fine
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[3], line 1[0m
-[0;32m----> 1[0m [38;5;28;01massert[39;00m [43mreduce[49m([38;5;241m0[39m, [38;5;241m0[39m, [38;5;241m13[39m) [38;5;241m==[39m ([38;5;241m0[39m, [38;5;241m1[39m, [38;5;241m1[39m), [38;5;124mf[39m[38;5;124m'[39m[38;5;132;01m{[39;00mreduce([38;5;241m0[39m,[38;5;250m [39m[38;5;241m0[39m,[38;5;250m [39m[38;5;241m13[39m)[38;5;132;01m}[39;00m[38;5;124m != (0, 1, 1)[39m[38;5;124m'[39m
-[1;32m      2[0m [38;5;28;01massert[39;00m reduce([38;5;241m0[39m, [38;5;241m0[39m, [38;5;241m245[39m) [38;5;241m==[39m ([38;5;241m1[39m, [38;5;241m0[39m, [38;5;241m5[39m), [38;5;124mf[39m[38;5;124m'[39m[38;5;132;01m{[39;00mreduce([38;5;241m0[39m,[38;5;250m [39m[38;5;241m0[39m,[38;5;250m [39m[38;5;241m245[39m)[38;5;132;01m}[39;00m[38;5;124m != (1, 0, 5)[39m[38;5;124m'[39m
-[1;32m      3[0m [38;5;28;01massert[39;00m reduce([38;5;241m0[39m, [38;5;241m0[39m, [38;5;241m252[39m) [38;5;241m==[39m ([38;5;241m1[39m, [38;5;241m1[39m, [38;5;241m0[39m), [38;5;124mf[39m[38;5;124m'[39m[38;5;132;01m{[39;00mreduce([38;5;241m0[39m,[38;5;250m [39m[38;5;241m0[39m,[38;5;250m [39m[38;5;241m252[39m)[38;5;132;01m}[39;00m[38;5;124m != (1, 1, 0)[39m[38;5;124m'[39m
+[0;31mNegativePounds[0m                            Traceback (most recent call last)
+Cell [0;32mIn[18], line 5[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mpytest[39;00m
+[1;32m      4[0m [38;5;28;01mwith[39;00m pytest[38;5;241m.[39mraises(NegativePounds):
+[0;32m----> 5[0m     [43mGBP[49m[43m([49m[38;5;241;43m1[39;49m[43m,[49m[43m [49m[38;5;241;43m-[39;49m[38;5;241;43m21[39;49m[43m,[49m[43m [49m[38;5;241;43m0[39;49m[43m)[49m [38;5;66;03m# Not fine[39;00m
 
-[0;31mNameError[0m: name 'reduce' is not defined
+File [0;32m~/courses/bb1000/exams/gh/solutions.py:129[0m, in [0;36mGBP.__init__[0;34m(self, pounds, shillings, pence)[0m
+[1;32m    127[0m [38;5;66;03m# 8. raise exception for negative amounts[39;00m
+[1;32m    128[0m [38;5;28;01mif[39;00m to_pence([38;5;241m*[39m[38;5;28mself[39m[38;5;241m.[39mdata) [38;5;241m<[39m [38;5;241m0[39m:
+[0;32m--> 129[0m     [38;5;28;01mraise[39;00m NegativePounds
+
+[0;31mNegativePounds[0m: 
 
