@@ -402,23 +402,12 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">to_pence</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Convert old British currency to smallest unit</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; to_pence(0, 1, 0)</span>
-<span class="sd">    12</span>
-<span class="sd">    &gt;&gt;&gt; to_pence(1, 0, 0)</span>
-<span class="sd">    240</span>
+<span class="sd">    Convert old British currency to smallest unit (p)</span>
+<span class="sd">    Example</span>
+
+<span class="sd">    &gt;&gt;&gt; to_pence(0, 2, 0)</span>
+<span class="sd">    24</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;One shilling is&quot;</span><span class="p">,</span> <span class="n">to_pence</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;pence&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;One pound is&quot;</span><span class="p">,</span> <span class="n">to_pence</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;pence&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>One shilling is None pence
-One pound is None pence
 </pre></div>
 </div>
 </div>
@@ -437,17 +426,13 @@ One pound is None pence
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">to_pence</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">):</span>
-    <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    Convert old British currency to smallest unit</span>
-<span class="s2">    </span>
-<span class="s2">    &gt;&gt;&gt; to_pence(0, 1, 0)</span>
-<span class="s2">    12</span>
-<span class="s2">    &gt;&gt;&gt; to_pence(1, 0, 0)</span>
-<span class="s2">    240</span>
-
-<span class="s2">    total_shillings = 20*pounds + shillings</span>
-<span class="s2">    total_pence = 12*total_shillings + pence</span>
-<span class="s2">    return total_pence</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert old British currency to smallest unit</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; to_pence(0, 2, 0)</span>
+<span class="sd">    24</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">pounds</span><span class="o">*</span><span class="mi">20</span> <span class="o">+</span> <span class="n">shillings</span><span class="p">)</span><span class="o">*</span><span class="mi">12</span> <span class="o">+</span> <span class="n">pence</span>
 </pre></div>
 </div>
 </div>
@@ -456,7 +441,8 @@ One pound is None pence
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reduce</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Reduce to fewest coins first by considering total pennies and change back to pounds, shillings and pence</span>
+<span class="sd">    Change the moneys first to maximize the number of pound notes,</span>
+<span class="sd">    then shillings, such that the total amount is constant</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 </pre></div>
 </div>
@@ -476,7 +462,8 @@ One pound is None pence
 <p class="admonition-title">Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def reduce(pounds, shillings, pence):
     &quot;&quot;&quot;
-    Reduce to fewest coins first by considering total pennies and change back to pounds, shillings and pence
+    Change the moneys first to maximize the number of pound notes,
+    then shillings, such that the total amount is constant
     &quot;&quot;&quot;
     total_pence = to_pence(pounds, shillings, pence)
     # The number of shillings you get out of these pennies
@@ -499,7 +486,9 @@ One pound is None pence
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">to_pounds</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">to_pence</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">)</span> <span class="o">//</span> <span class="mi">240</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the max number of pound notes that can be obtained</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -516,6 +505,9 @@ One pound is None pence
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">to_pounds</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the max number of pound notes that can be obtained</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">to_pence</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">)</span> <span class="o">//</span> <span class="mi">240</span>
 </pre></div>
 </div>
@@ -524,6 +516,9 @@ One pound is None pence
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">to_shillings</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the max number of pound notes that can be obtained</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
     <span class="k">return</span> <span class="n">to_pence</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">)</span> <span class="o">//</span> <span class="mi">12</span>
 </pre></div>
 </div>
@@ -541,16 +536,11 @@ One pound is None pence
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">to_shillings</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the max number of pound notes that can be obtained</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
     <span class="k">return</span> <span class="n">to_pence</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">)</span> <span class="o">//</span> <span class="mi">12</span>
 </pre></div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">to_shillings</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">to_pence</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">)</span> <span class="o">//</span> <span class="mi">12</span>
-</pre></div>
-</div>
 </div>
 </div>
 </section>
@@ -571,6 +561,15 @@ One pound is None pence
 <span class="k">assert</span> <span class="n">GBP</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>The intializer must save the input coins as a tuple in an instance attribute <code class="docutils literal notranslate"><span class="pre">data</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">):</span>
+        <span class="c1"># Save notes/coins as a tuple &quot;data&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
 <p><strong>6</strong> Define addition for this class</p>
@@ -607,7 +606,7 @@ and create a new GBP object with these sum amounts</p>
 </div>
 </div>
 </div>
-<div class="admonition-solution admonition">
+<div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="n">pounds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -620,18 +619,6 @@ and create a new GBP object with these sum amounts</p>
 </div>
 </div>
 <p><strong>8</strong>. Define a special method for equality so that two GBP wallets are considered equal if the total amount is the same</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">to_pence</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="n">to_pence</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">GBP</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="n">GBP</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -665,21 +652,14 @@ and create a new GBP object with these sum amounts</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-          <span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
-          <span class="k">yield</span> <span class="n">pounds</span>
-          <span class="k">yield</span> <span class="n">shillings</span>
-          <span class="k">yield</span> <span class="n">pence</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <p><strong>10</strong>. Assume that we have no tolerance for debt, and that the total amount always of a GBP object always has to be positive. We can define an exception if an amount is negative</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NegativePounds</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NegativePounds</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>Make sure that it is raised when an amount is negative, example</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; GPB(-1, 0, 0)
@@ -693,28 +673,12 @@ NegativePounds:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">GBP</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">19</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="n">GBP</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># This is fine</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">NegativePounds</span>
+<span class="k">assert</span> <span class="n">GBP</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">19</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="n">GBP</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># This is fine</span>
 
 <span class="kn">import</span> <span class="nn">pytest</span>
 <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="n">NegativePounds</span><span class="p">):</span>
     <span class="n">GBP</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">21</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># Not fine</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NegativePounds</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pytest</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="n">NegativePounds</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">GBP</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">21</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># Not fine</span>
-
-<span class="nn">File ~/courses/bb1000/exams/gh/solutions.py:129,</span> in <span class="ni">GBP.__init__</span><span class="nt">(self, pounds, shillings, pence)</span>
-<span class="g g-Whitespace">    </span><span class="mi">127</span> <span class="c1"># 8. raise exception for negative amounts</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span> <span class="k">if</span> <span class="n">to_pence</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">129</span>     <span class="k">raise</span> <span class="n">NegativePounds</span>
-
-<span class="ne">NegativePounds</span>: 
 </pre></div>
 </div>
 </div>
@@ -724,6 +688,7 @@ NegativePounds:
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">to_pence</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">shillings</span><span class="p">,</span> <span class="n">pence</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">NegativePounds</span>
+        <span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -740,7 +705,12 @@ NegativePounds:
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
-<p>The sorted method requires that ordering can be defined through the <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> operator.</p>
+<p>The error you get will contain a messege that ends with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;&lt;&#39;</span> <span class="ow">not</span> <span class="n">supported</span> <span class="n">between</span> <span class="n">instances</span> 
+</pre></div>
+</div>
+<p>So sorted method requires that ordering can be defined through the <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> operator.
+We implement that with the <code class="docutils literal notranslate"><span class="pre">__lt__</span></code> method</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Special method that implements smaller than</span>
