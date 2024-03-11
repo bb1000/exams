@@ -18,22 +18,22 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-assert GBP(1, -19, 0) == GBP(0, 1, 0) # This is fine
+users = get_usernames("emails.txt")
+expected = ["bonnie", "clyde", "scarlett", "rhett"]
+assert users == expected, f'\n{users} \n!= \n{expected}'
 
-
-import pytest
-with pytest.raises(NegativePounds):
-    GBP(1, -21, 0) # Not fine
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[17], line 4[0m
-[1;32m      1[0m [38;5;28;01massert[39;00m GBP([38;5;241m1[39m, [38;5;241m-[39m[38;5;241m19[39m, [38;5;241m0[39m) [38;5;241m==[39m GBP([38;5;241m0[39m, [38;5;241m1[39m, [38;5;241m0[39m) [38;5;66;03m# This is fine[39;00m
-[0;32m----> 4[0m [38;5;28;01mimport[39;00m [38;5;21;01mpytest[39;00m
-[1;32m      5[0m [38;5;28;01mwith[39;00m pytest[38;5;241m.[39mraises(NegativePounds):
-[1;32m      6[0m     GBP([38;5;241m1[39m, [38;5;241m-[39m[38;5;241m21[39m, [38;5;241m0[39m) [38;5;66;03m# Not fine[39;00m
+[0;31mAssertionError[0m                            Traceback (most recent call last)
+Cell [0;32mIn[4], line 3[0m
+[1;32m      1[0m users [38;5;241m=[39m get_usernames([38;5;124m"[39m[38;5;124memails.txt[39m[38;5;124m"[39m)
+[1;32m      2[0m expected [38;5;241m=[39m [[38;5;124m"[39m[38;5;124mbonnie[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mclyde[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mscarlett[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mrhett[39m[38;5;124m"[39m]
+[0;32m----> 3[0m [38;5;28;01massert[39;00m users [38;5;241m==[39m expected, [38;5;124mf[39m[38;5;124m'[39m[38;5;130;01m\n[39;00m[38;5;132;01m{[39;00musers[38;5;132;01m}[39;00m[38;5;124m [39m[38;5;130;01m\n[39;00m[38;5;124m!= [39m[38;5;130;01m\n[39;00m[38;5;132;01m{[39;00mexpected[38;5;132;01m}[39;00m[38;5;124m'[39m
 
-[0;31mModuleNotFoundError[0m: No module named 'pytest'
+[0;31mAssertionError[0m: 
+None 
+!= 
+['bonnie', 'clyde', 'scarlett', 'rhett']
 

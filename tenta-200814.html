@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tenta 2020-08-14 &#8212; BB1000</title>
+    <title>Tenta 2020-08-14 &#8212; My sample book</title>
   
   
   
@@ -60,6 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tenta-200814';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tenta 2021-06-01" href="tenta-2021-06-01.html" />
+    <link rel="prev" title="Tenta 2020-06-05" href="tenta-200605.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +123,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -150,8 +150,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="BB1000 - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="BB1000 - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -176,8 +176,10 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="tenta-200605.html">Tenta 2020-06-05</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tenta 2020-08-14</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tenta-2021-06-01.html">Tenta 2021-06-01</a></li>
 <li class="toctree-l1"><a class="reference internal" href="omtenta-2022-06-10.html">Tenta 2022-06-10</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Omtenta-2022-08-19.html">Tenta 2022-08-19</a></li>
 </ul>
@@ -234,7 +236,7 @@
       
       
       
-      <li><a href="https://github.com/bb1000/exams" target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -251,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/bb1000/exams/issues/new?title=Issue%20on%20page%20%2Ftenta-200814.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftenta-200814.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -492,17 +494,6 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="dropdown admonition">
-<p class="admonition-title">Solution</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">extract_emails</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="n">emails</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-        <span class="n">email</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
-        <span class="n">emails</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">email</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">emails</span>
-</pre></div>
-</div>
-</div>
 </section>
 <section id="pass-emails-to-a-mail-program">
 <h3>2 Pass emails to a mail program<a class="headerlink" href="#pass-emails-to-a-mail-program" title="Link to this heading">#</a></h3>
@@ -533,9 +524,9 @@ document.write(`
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendmail_format</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="n">emails</span> <span class="o">=</span> <span class="n">extract_emails</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s2">&quot;; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">extract_emails</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>                                                              
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="k">as</span> <span class="n">f</span><span class="p">:</span>                                                               
+        <span class="k">return</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">]</span>                                          
 </pre></div>
 </div>
 </div>
@@ -557,9 +548,8 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">Employee</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">Emp</span> <span class="k">as</span> <span class="n">Employee</span>
 <span class="n">employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s1">&#39;1,Conn,De Gregoli,cdegregoli0@epa.gov,&quot;Kunze, Crona and Bergnaum&quot;&#39;</span><span class="p">)</span>
-
 <span class="k">assert</span> <span class="n">employee</span><span class="o">.</span><span class="n">first</span> <span class="o">==</span> <span class="s1">&#39;Conn&#39;</span>
 </pre></div>
 </div>
@@ -581,9 +571,9 @@ document.write(`
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">first</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">last</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">:</span>                                                                            
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>                                                              
+        <span class="bp">self</span><span class="o">.</span><span class="n">first</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">last</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>                           
 </pre></div>
 </div>
 </div>
@@ -603,8 +593,10 @@ document.write(`
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last</span><span class="si">}</span><span class="s1"> &lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s1">&gt;&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">:</span>                                                                            
+    <span class="o">...</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>                                                                     
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last</span><span class="si">}</span><span class="s1"> &lt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s1">&gt;&#39;</span>                                  
 </pre></div>
 </div>
 </div>
@@ -617,7 +609,7 @@ document.write(`
 <p>Reuse the class definition Employee of part 2 (copy-paste your previous solution) and the staff file</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#class Employee:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># class Employee:</span>
     <span class="c1"># YOUR CODE HERE</span>
 </pre></div>
 </div>
@@ -706,20 +698,20 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">japan_sendlist</span><span class="p">(</span><span class="s1">&#39;staff.csv&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Montgomery Dublin &lt;mdublin3@dion.ne.jp&gt;: Abramo Shoemark &lt;ashoemark8@yahoo.co.jp&gt;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">japan_sendlist</span><span class="p">(</span><span class="s1">&#39;staff.csv&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Montgomery Dublin &lt;mdublin3@dion.ne.jp&gt;; Abramo Shoemark &lt;ashoemark8@yahoo.co.jp&gt;&#39;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_japanese</span><span class="p">(</span><span class="n">employee</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">employee</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.jp&#39;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">japan_sendlist</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="n">employees</span> <span class="o">=</span> <span class="n">read_list_of_employees</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-    <span class="n">filtered</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">is_japanese</span><span class="p">,</span> <span class="n">employees</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s1">&#39;: &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">filtered</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">japan_sendlist</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="c1"># Define a helper function for filtering japanese email addresses</span>
+    <span class="k">def</span> <span class="nf">is_jap</span><span class="p">(</span><span class="n">employee</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">employee</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.jp&#39;</span><span class="p">)</span>
+        
+    <span class="n">filtered</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">is_jap</span><span class="p">,</span> <span class="n">employees</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">filtered</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -757,6 +749,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="tenta-200605.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tenta 2020-06-05</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tenta-2021-06-01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tenta 2021-06-01</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
