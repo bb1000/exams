@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tenta BB1000 2022-08-19 &#8212; My sample book</title>
+    <title>Tenta 2022-08-19 &#8212; My sample book</title>
   
   
   
@@ -60,6 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Omtenta-2022-08-19';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tenta 2022-06-10" href="omtenta-2022-06-10.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +122,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -176,9 +175,10 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="tenta-200605.html">Tenta 2020-06-05</a></li>
 <li class="toctree-l1"><a class="reference internal" href="omtenta-2022-06-10.html">Tenta 2022-06-10</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tenta 2022-08-19</a></li>
 </ul>
 
     </div>
@@ -364,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tenta BB1000 2022-08-19</h1>
+    <h1>Tenta 2022-08-19</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -390,8 +390,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tenta-bb1000-2022-08-19">
-<h1>Tenta BB1000 2022-08-19<a class="headerlink" href="#tenta-bb1000-2022-08-19" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tenta-2022-08-19">
+<h1>Tenta 2022-08-19<a class="headerlink" href="#tenta-2022-08-19" title="Link to this heading">#</a></h1>
 <section id="part-1">
 <h2>Part 1<a class="headerlink" href="#part-1" title="Link to this heading">#</a></h2>
 <p>a) Define a <code class="docutils literal notranslate"><span class="pre">minmax</span></code> function that returns a tuple containing the smallest and largest number of a sequence such that</p>
@@ -736,30 +736,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">assert</span> <span class="n">minmax2</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">assert</span> <span class="n">minmax2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">assert</span> <span class="n">minmax2</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">assert</span> <span class="n">minmax2</span><span class="p">(</span><span class="o">*</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-
-<span class="nn">File ~/courses/bb1000/exams/gh/solutions/omtenta_20220819.py:39,</span> in <span class="ni">minmax2</span><span class="nt">(sequence, default, key)</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="k">def</span> <span class="nf">minmax2</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">39</span>     <span class="n">smallest</span><span class="p">,</span> <span class="n">largest</span> <span class="o">=</span> <span class="n">minmax</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">default</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span>     <span class="k">return</span> <span class="n">MinMax</span><span class="p">(</span><span class="n">smallest</span><span class="p">,</span> <span class="n">largest</span><span class="p">)</span>
-
-<span class="nn">File ~/courses/bb1000/exams/gh/solutions/omtenta_20220819.py:5,</span> in <span class="ni">minmax</span><span class="nt">(sequence, default, key)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">def</span> <span class="nf">minmax</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="k">return</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: object of type &#39;int&#39; has no len()
-</pre></div>
-</div>
-</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
@@ -807,6 +783,15 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="omtenta-2022-06-10.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tenta 2022-06-10</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
