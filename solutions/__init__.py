@@ -7,3 +7,7 @@ from .omtenta_20220819 import ( # noqa
     minmax_items,
     minmax2,
 )
+from .tenta_20200814 import ( # noqa
+    extract_emails,
+)
+
