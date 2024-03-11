@@ -1,0 +1,5 @@
+```{admonition} Solution
+:class: dropdown
+~~~
+~~~
+```
