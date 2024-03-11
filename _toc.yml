@@ -5,8 +5,8 @@ format: jb-book
 root: intro
 chapters:
 - file: tenta-200605.ipynb
-#- file: tenta-200814.ipynb
-#- file: tenta-2021-06-01.ipynb
+- file: tenta-200814.ipynb
+- file: tenta-2021-06-01.ipynb
 #- file: tenta-2021-08-20.ipynb
 #- file: tenta-2022-03-17.ipynb
 #- file: tenta-2022-06-01.ipynb
