@@ -21,3 +21,15 @@ from .tenta_20210601 import ( # noqa
     ChalmersHack,
     get_users,
 )
+from .tenta_20210820 import ( # noqa
+    get_usd,
+    get_usd_as_dict,
+    get_index_max_value,
+    dca,
+    data0, data1, data2, data3,
+    exchange_rates0,
+    exchange_rates1,
+    #exchange_rates2,
+    us2sek,
+    get_sek,
+)
