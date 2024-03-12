@@ -1,0 +1,1215 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tenta 2021-08-20 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tenta-2021-08-20';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tenta 2022-06-10" href="omtenta-2022-06-10.html" />
+    <link rel="prev" title="Tenta 2021-06-01" href="tenta-2021-06-01.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Exams
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tenta-200605.html">Tenta 2020-06-05</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tenta-200814.html">Tenta 2020-08-14</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tenta-2021-06-01.html">Tenta 2021-06-01</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tenta 2021-08-20</a></li>
+<li class="toctree-l1"><a class="reference internal" href="omtenta-2022-06-10.html">Tenta 2022-06-10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Omtenta-2022-08-19.html">Tenta 2022-08-19</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftenta-2021-08-20.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tenta-2021-08-20.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tenta 2021-08-20</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#level-1">Level 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#level-2">Level 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#level-3">Level 3</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tenta-2021-08-20">
+<h1>Tenta 2021-08-20<a class="headerlink" href="#tenta-2021-08-20" title="Link to this heading">#</a></h1>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
+<p>For the whole exam you should be able to import the following libraries</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="level-1">
+<h2>Level 1<a class="headerlink" href="#level-1" title="Link to this heading">#</a></h2>
+<p><strong>1. The file <code class="docutils literal notranslate"><span class="pre">market-price.csv</span></code> contains historical daily bitcoin data for the recent year. Write a function that extracts the value in dollars for a given date</strong></p>
+<p>This can be a simple implementation looping over the lines of the file processing the line
+with the matching date. Not that the return value is expected to be of type float</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_usd</span><span class="p">(</span><span class="s1">&#39;2021-04-01&#39;</span><span class="p">,</span> <span class="s1">&#39;market-price.csv&#39;</span><span class="p">)</span>
+<span class="go">58735.25</span>
+</pre></div>
+</div>
+<p>The file has the structure</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2020-08-20 00:00:00,11734.0
+2020-08-21 00:00:00,11865.82
+2020-08-22 00:00:00,11522.8
+...
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_usd</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns exchange rate in file for given date</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">get_usd</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">get_usd</span><span class="p">(</span><span class="s1">&#39;2021-04-01&#39;</span><span class="p">,</span> <span class="s1">&#39;market-price.csv&#39;</span><span class="p">)</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="mf">58735.25</span>
+<span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1"> != </span><span class="si">{</span><span class="n">expected</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="k">assert</span> <span class="n">get_usd</span><span class="p">(</span><span class="s1">&#39;2021-08-19&#39;</span><span class="p">,</span> <span class="s1">&#39;market-price.csv&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mf">44777.86</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_usd</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns exchange rate in file for given date</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">date</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">date</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span> <span class="o">==</span> <span class="n">date_string</span><span class="p">:</span>
+                <span class="k">break</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>2. Read tha data values to a dictionary</strong></p>
+<p>Let the date format be a string in isoformat YYYY-MM-DD, which is the dictionary key and the exchange rate the
+dictionary value</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_usd_as_dict</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns a dictionary with dates as keys and exchange rate as values</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">get_usd_as_dict</span>
+<span class="n">usd</span> <span class="o">=</span> <span class="n">get_usd_as_dict</span><span class="p">(</span><span class="s1">&#39;market-price.csv&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">usd</span><span class="p">[</span><span class="s1">&#39;2021-04-01&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">58735.25</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_usd_as_dict</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns a dictionary with dates as keys and exchange rate as values</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">date</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">date</span><span class="p">[:</span><span class="mi">10</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3. At which date was the exchange rate highest?</strong></p>
+<p>Write a function which takes a dictionary of the form of assignment 2 and returns the date with the highest rate.</p>
+<p>Hint: look up the documentation for <code class="docutils literal notranslate"><span class="pre">sorted</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_index_max_value</span><span class="p">(</span><span class="n">dct</span><span class="p">):</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    <span class="o">...</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">get_index_max_value</span>
+<span class="k">assert</span> <span class="n">get_index_max_value</span><span class="p">(</span><span class="n">usd</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;2021-04-14&#39;</span>
+<span class="k">assert</span> <span class="n">usd</span><span class="p">[</span><span class="s1">&#39;2021-04-14&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">63554.44</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_index_max_value</span><span class="p">(</span><span class="n">dct</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">dct</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">dct</span><span class="p">[</span><span class="n">k</span><span class="p">])[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p><strong>4. Dollar cost averaging</strong></p>
+<p>Dollar cost averaging (DCA) means to save a fixed amount in dollars on a regular basis. An asset with large variation in value over time is high risk saving, but DCA is beleived to reduce risk in a longer perspective. Assume that you save 1 dollar per day converting it to btc without any exchange fees. What is the total btc accumulated  during this year.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dca</span><span class="p">(</span><span class="n">dct</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return total btc acuumulated from $1/day</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">dca</span>
+<span class="k">assert</span> <span class="n">dca</span><span class="p">({</span><span class="s1">&#39;2008-01-01&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;2008-01-02&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">})</span> <span class="o">==</span> <span class="mf">.125</span>
+<span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">dca</span><span class="p">(</span><span class="n">usd</span><span class="p">),</span> <span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.01529260</span>  <span class="c1"># values is a dict from assignment 2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dca</span><span class="p">(</span><span class="n">dct</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return total btc acuumulated from $1/day</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">btc</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">daily</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dct</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="n">btc</span> <span class="o">+=</span> <span class="n">daily</span><span class="o">/</span><span class="n">v</span>
+    <span class="k">return</span> <span class="n">btc</span>
+</pre></div>
+</div>
+</div>
+<p><em>Observation</em>:
+the total invested and  value at the end of the year</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The total invested:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">usd</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Value after one year&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">dca</span><span class="p">(</span><span class="n">usd</span><span class="p">)</span> <span class="o">*</span> <span class="nb">list</span><span class="p">(</span><span class="n">usd</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The total invested: 365
+Value after one year 684.77
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="level-2">
+<h2>Level 2<a class="headerlink" href="#level-2" title="Link to this heading">#</a></h2>
+<p><strong>5. Use of pandas</strong></p>
+<p>Read in the data in <code class="docutils literal notranslate"><span class="pre">market-price.csv</span></code> as a pandas DataFrame. Initially it may look ill-formatted, if the data file does not have headers if its own</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>      2020-08-20 00:00:00 	11734.0
+0 	2020-08-21 00:00:00 	11865.82
+1 	2020-08-22 00:00:00 	11522.80
+2 	2020-08-23 00:00:00 	11683.44
+... 
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+<span class="c1"># data.head()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">data0</span> <span class="k">as</span> <span class="n">data</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;market-price.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>6. Find options in 5. so that column headers are ‘date’ and ‘USD’</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>      date 	                USD
+0 	2020-08-20 00:00:00 	11734.00
+1 	2020-08-21 00:00:00 	11865.82
+2 	2020-08-22 00:00:00 	11522.80
+3 	2020-08-23 00:00:00 	11683.44
+4 	2020-08-24 00:00:00 	11653.02
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#data = (</span>
+    <span class="c1"># YOUR CODE HERE</span>
+<span class="c1">#)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2020-08-20 00:00:00</th>
+      <th>11734.0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-08-21 00:00:00</td>
+      <td>11865.82</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-08-22 00:00:00</td>
+      <td>11522.80</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-08-23 00:00:00</td>
+      <td>11683.44</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-08-24 00:00:00</td>
+      <td>11653.02</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-08-25 00:00:00</td>
+      <td>11763.93</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">data1</span> <span class="k">as</span> <span class="n">data</span>
+<span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;market-price.csv&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">]),</span>
+</pre></div>
+</div>
+</div>
+<p><strong>7. How du you make the date column a dataframe index?</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                         USD
+date 	
+2020-08-20 00:00:00 	11734.00
+2020-08-21 00:00:00 	11865.82
+2020-08-22 00:00:00 	11522.80
+...
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#data = (</span>
+    <span class="c1"># YOUR CODE HERE</span>
+<span class="c1">#)</span>
+<span class="c1">#data.head()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">data2</span> <span class="k">as</span> <span class="n">data</span>
+<span class="k">assert</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;USD&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;date&#39;</span>
+<span class="n">data</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>USD    float64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;market-price.csv&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<p><strong>8. convert the expression to a Series object</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>date
+2020-08-20    11734.00
+2020-08-21    11865.82
+2020-08-22    11522.80
+...
+Name: USD, dtype: float64
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#data = (</span>
+    <span class="c1"># YOUR CODE HERE</span>
+<span class="c1">#)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>USD</th>
+    </tr>
+    <tr>
+      <th>date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020-08-20 00:00:00</th>
+      <td>11734.00</td>
+    </tr>
+    <tr>
+      <th>2020-08-21 00:00:00</th>
+      <td>11865.82</td>
+    </tr>
+    <tr>
+      <th>2020-08-22 00:00:00</th>
+      <td>11522.80</td>
+    </tr>
+    <tr>
+      <th>2020-08-23 00:00:00</th>
+      <td>11683.44</td>
+    </tr>
+    <tr>
+      <th>2020-08-24 00:00:00</th>
+      <td>11653.02</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">data3</span> <span class="k">as</span> <span class="n">data</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pandas</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">data</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;USD&#39;</span>
+<span class="k">assert</span> <span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;date&#39;</span>
+<span class="k">assert</span> <span class="n">data</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;float&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Observation</em>: date-like entries can be processed with the option parse_dates=[0], so that Python can internally use date-types. See e.g. the difference it makes for plotting. Use this in next assignment</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;date&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/b2f0b51bb917e70a68487565bd434d01c0d8fd7668693cbfb2492ff184d4bae4.png" src="_images/b2f0b51bb917e70a68487565bd434d01c0d8fd7668693cbfb2492ff184d4bae4.png" />
+</div>
+</div>
+</section>
+<section id="level-3">
+<h2>Level 3<a class="headerlink" href="#level-3" title="Link to this heading">#</a></h2>
+<p>The goal here is to obtain a decorator that returns values from <code class="docutils literal notranslate"><span class="pre">market-price.csv</span></code> in SEK insted of USD given the exchange rate for a given date in the file <code class="docutils literal notranslate"><span class="pre">exchange-rates.csv</span></code></p>
+<p><strong>9.</strong> Verify that the <code class="docutils literal notranslate"><span class="pre">Date</span></code> column has the pandas datatype <code class="docutils literal notranslate"><span class="pre">Timestamp</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># exchange_rates = (</span>
+<span class="c1">#    # YOUR CODE HERE</span>
+<span class="c1">#)</span>
+<span class="c1">#exchange_rates.head()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">exchange_rates0</span> <span class="k">as</span> <span class="n">exchange_rates</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exchange_rates</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> <span class="n">pandas</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exchange_rates</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;exchange-rates.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>10.</strong> Create a column with dates in string iso format. The result of the following cell is us2sek as a pandas.Series object</p>
+<p><em>Hint: work with the <code class="docutils literal notranslate"><span class="pre">apply</span></code> method of a series and a function that uses datetime.isoformat</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">exchange_rates1</span> <span class="k">as</span> <span class="n">exchange_rates</span>
+<span class="n">exchange_rates</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>USD</th>
+      <th>SEK</th>
+      <th>isodate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021-08-18</td>
+      <td>1</td>
+      <td>8.7207</td>
+      <td>2021-08-18</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021-08-17</td>
+      <td>1</td>
+      <td>8.6639</td>
+      <td>2021-08-17</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021-08-16</td>
+      <td>1</td>
+      <td>8.6653</td>
+      <td>2021-08-16</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-08-15</td>
+      <td>1</td>
+      <td>8.6692</td>
+      <td>2021-08-15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021-08-14</td>
+      <td>1</td>
+      <td>8.6692</td>
+      <td>2021-08-14</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">isodate</span> <span class="o">=</span> <span class="n">exchange_rates</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()[:</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">exchange_rates</span><span class="p">[</span><span class="s1">&#39;isodate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">isodate</span>
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exchange_rates</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>USD</th>
+      <th>SEK</th>
+      <th>isodate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021-08-18</td>
+      <td>1</td>
+      <td>8.7207</td>
+      <td>2021-08-18</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021-08-17</td>
+      <td>1</td>
+      <td>8.6639</td>
+      <td>2021-08-17</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021-08-16</td>
+      <td>1</td>
+      <td>8.6653</td>
+      <td>2021-08-16</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-08-15</td>
+      <td>1</td>
+      <td>8.6692</td>
+      <td>2021-08-15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021-08-14</td>
+      <td>1</td>
+      <td>8.6692</td>
+      <td>2021-08-14</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">us2sek</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">us2sek</span><span class="p">,</span> <span class="n">pandas</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">us2sek</span><span class="p">[</span><span class="s1">&#39;2020-08-18&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">8.6679</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+
+<span class="n">exchange_rates</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;isodate&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">us2sek</span> <span class="o">=</span> <span class="n">exchange_rates</span><span class="p">[</span><span class="s1">&#39;SEK&#39;</span><span class="p">]</span>
+<span class="n">us2sek</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>isodate
+2021-08-18    8.7207
+2021-08-17    8.6639
+2021-08-16    8.6653
+2021-08-15    8.6692
+2021-08-14    8.6692
+               ...  
+2020-08-22    8.8053
+2020-08-21    8.8053
+2020-08-20    8.7388
+2020-08-19    8.6433
+2020-08-18    8.6679
+Name: SEK, Length: 366, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>11.</strong> Complete a decorator so that <code class="docutils literal notranslate"><span class="pre">get_sek</span></code> returns the btc value in SEK instead of dollars</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    <span class="o">...</span>
+<span class="n">get_sek</span> <span class="o">=</span> <span class="n">convert</span><span class="p">(</span><span class="n">get_usd</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">solutions</span> <span class="kn">import</span> <span class="n">get_sek</span>
+<span class="k">assert</span> <span class="n">get_sek</span><span class="p">(</span><span class="s1">&#39;2020-08-20&#39;</span><span class="p">,</span> <span class="s1">&#39;market-price.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">102541.08</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">get_sek</span><span class="p">(</span><span class="s1">&#39;2021-08-18&#39;</span><span class="p">,</span> <span class="s1">&#39;market-price.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">389366.78</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tenta-2021-06-01.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tenta 2021-06-01</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="omtenta-2022-06-10.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tenta 2022-06-10</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#level-1">Level 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#level-2">Level 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#level-3">Level 3</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

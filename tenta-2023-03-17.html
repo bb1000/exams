@@ -1,0 +1,941 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tenta 2023-03-17 14:00 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tenta-2023-03-17';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Exams
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tenta-200605.html">Tenta 2020-06-05</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tenta-200814.html">Tenta 2020-08-14</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tenta-2021-06-01.html">Tenta 2021-06-01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tenta-2021-08-20.html">Tenta 2021-08-20</a></li>
+<li class="toctree-l1"><a class="reference internal" href="omtenta-2022-06-10.html">Tenta 2022-06-10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Omtenta-2022-08-19.html">Tenta 2022-08-19</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftenta-2023-03-17.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tenta-2023-03-17.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tenta 2023-03-17 14:00</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1">Part 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-digital-clock">A digital clock</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-return-type">Verify return type</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-before-after-midnight">Verify before/after midnight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-handling-of-fractional-seconds">Verify handling of fractional seconds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#include-optional-timezone">Include optional timezone</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical mechanics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-particle-class">A Particle class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subclass-particle-with-charge">Subclass: particle with charge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-case-hydrogen-atom">Test case: hydrogen atom</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3">Part 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#count">Count</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search">Search</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Before you turn this problem in, make sure everything runs as expected. First, <strong>restart the kernel</strong> (in the menubar, select Kernel<span class="math notranslate nohighlight">\(\rightarrow\)</span>Restart) and then <strong>run all cells</strong> (in the menubar, select Cell<span class="math notranslate nohighlight">\(\rightarrow\)</span>Run All).</p>
+<p>Make sure you fill in any place that says <code class="docutils literal notranslate"><span class="pre">YOUR</span> <span class="pre">CODE</span> <span class="pre">HERE</span></code> or “YOUR ANSWER HERE”, as well as your name and collaborators below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">PERSONNUMBER</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="tenta-2023-03-17-14-00">
+<h1>Tenta 2023-03-17 14:00<a class="headerlink" href="#tenta-2023-03-17-14-00" title="Link to this heading">#</a></h1>
+<p>To intialize this exam to not forget run the import cell next</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="part-1">
+<h2>Part 1<a class="headerlink" href="#part-1" title="Link to this heading">#</a></h2>
+<section id="a-digital-clock">
+<h3>A digital clock<a class="headerlink" href="#a-digital-clock" title="Link to this heading">#</a></h3>
+<p>The time.time function returns the number of seconds since a reference point of time known as the UNIX epoch, 1 Jan 1970 (GMT).</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; time.time()
+1678896639.9824622
+</pre></div>
+</div>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">current_time_of_day</span></code> that has no required input, and that returns its output as a string-representation the of current time (GMT). Example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; current_time_of_day()
+&#39;13:05:00&#39;
+</pre></div>
+</div>
+<p>will be the output 5 minutes into the time of the exam (still GMT).</p>
+<p>You are expected to use <code class="docutils literal notranslate"><span class="pre">time.time</span></code> in your solution and to truncate the <code class="docutils literal notranslate"><span class="pre">float</span></code> value it returns to an integer - i.e. remove/ignore decimals.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">current_time_of_day</span><span class="p">(</span><span class="n">tz</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; current_time_of_day()</span>
+<span class="sd">    &#39;13:05:00&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    <span class="c1">################</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="verify-return-type">
+<h3>Verify return type<a class="headerlink" href="#verify-return-type" title="Link to this heading">#</a></h3>
+<p>Here we verify that we have string of length 8 and that the the output at midnight GMT is</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; current_time_of_day()
+&#39;00:00:00&#39;
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">current_time_of_day</span><span class="p">())</span> <span class="o">==</span> <span class="nb">str</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_time_of_day</span><span class="p">())</span> <span class="o">==</span> <span class="mi">8</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">current_time_of_day</span><span class="p">())</span> <span class="o">==</span> <span class="nb">str</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_time_of_day</span><span class="p">())</span> <span class="o">==</span> <span class="mi">8</span>
+
+<span class="ne">AssertionError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="verify-before-after-midnight">
+<h3>Verify before/after midnight<a class="headerlink" href="#verify-before-after-midnight" title="Link to this heading">#</a></h3>
+<p>At any midnight the return value should  be the string</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;00:00:00&#39;
+</pre></div>
+</div>
+<p>and a second before that</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;23:59:59&#39;
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">patch</span>
+
+<span class="n">any_random_midnight</span> <span class="o">=</span> <span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">24</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># This make time.time() return a chosen value during a test</span>
+
+<span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;time.time&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">any_random_midnight</span><span class="p">):</span>  
+    <span class="n">calculated</span> <span class="o">=</span> <span class="n">current_time_of_day</span><span class="p">()</span>
+    <span class="n">expected</span> <span class="o">=</span> <span class="s1">&#39;00:00:00&#39;</span>
+    <span class="k">assert</span> <span class="n">calculated</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">calculated</span><span class="si">=}</span><span class="s1"> != </span><span class="si">{</span><span class="n">expected</span><span class="si">}</span><span class="s1">&#39;</span>
+    
+<span class="n">just_before_midnight</span> <span class="o">=</span> <span class="n">any_random_midnight</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;time.time&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">just_before_midnight</span><span class="p">):</span> 
+    <span class="n">calculated</span> <span class="o">=</span> <span class="n">current_time_of_day</span><span class="p">()</span>
+    <span class="n">expected</span> <span class="o">=</span> <span class="s1">&#39;23:59:59&#39;</span>
+    <span class="k">assert</span> <span class="n">calculated</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">calculated</span><span class="si">=}</span><span class="s1"> != </span><span class="si">{</span><span class="n">expected</span><span class="si">=}</span><span class="s1">&#39;</span>
+  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="verify-handling-of-fractional-seconds">
+<h3>Verify handling of fractional seconds<a class="headerlink" href="#verify-handling-of-fractional-seconds" title="Link to this heading">#</a></h3>
+<p>Verify that fractional values from <code class="docutils literal notranslate"><span class="pre">time.time</span></code> is handled such that</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.9 seconds after midnight -&gt; &quot;00:00:00&quot;
+1.1 seconds after midnight -&gt; &quot;00:00:01&quot;
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">patch</span>
+
+<span class="n">any_random_midnight</span> <span class="o">=</span> <span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">24</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># This make time.time() return a chosen value during a test</span>
+
+<span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;time.time&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">any_random_midnight</span> <span class="o">+</span> <span class="mf">0.9</span><span class="p">):</span>  
+    <span class="n">calculated</span> <span class="o">=</span> <span class="n">current_time_of_day</span><span class="p">()</span>
+    <span class="n">expected</span> <span class="o">=</span> <span class="s1">&#39;00:00:00&#39;</span>
+    <span class="k">assert</span> <span class="n">calculated</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">calculated</span><span class="si">=}</span><span class="s1"> != </span><span class="si">{</span><span class="n">expected</span><span class="si">}</span><span class="s1">&#39;</span>
+    
+<span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;time.time&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">any_random_midnight</span> <span class="o">+</span> <span class="mf">1.1</span><span class="p">):</span>  
+    <span class="n">calculated</span> <span class="o">=</span> <span class="n">current_time_of_day</span><span class="p">()</span>
+    <span class="n">expected</span> <span class="o">=</span> <span class="s1">&#39;00:00:01&#39;</span>
+    <span class="k">assert</span> <span class="n">calculated</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">calculated</span><span class="si">=}</span><span class="s1"> != </span><span class="si">{</span><span class="n">expected</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="include-optional-timezone">
+<h3>Include optional timezone<a class="headerlink" href="#include-optional-timezone" title="Link to this heading">#</a></h3>
+<p>Complement the function with an optional argument <code class="docutils literal notranslate"><span class="pre">tz</span></code>, an integer representing hours ahead of GMT. For Central European Time (CET) this has value 1.</p>
+<p>The docstring above could be updated with</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; current_time_of_day()
+&#39;13:05:00&#39;
+&gt;&gt;&gt; current_time_of_day(tz=1)
+&#39;14:05:00&#39;
+</pre></div>
+</div>
+<p>Verify for yourself that it returns the current time in CET timezone</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">patch</span>
+
+<span class="n">any_random_midnight</span> <span class="o">=</span> <span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">24</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># This make time.time() return a chosen value during a test</span>
+
+<span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;time.time&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">any_random_midnight</span><span class="p">):</span>  
+    <span class="n">calculated</span> <span class="o">=</span> <span class="n">current_time_of_day</span><span class="p">(</span><span class="n">tz</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">expected</span> <span class="o">=</span> <span class="s1">&#39;01:00:00&#39;</span>
+    <span class="k">assert</span> <span class="n">calculated</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">calculated</span><span class="si">=}</span><span class="s1"> != </span><span class="si">{</span><span class="n">expected</span><span class="si">}</span><span class="s1">&#39;</span>
+    
+<span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;time.time&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">any_random_midnight</span><span class="p">):</span>  
+    <span class="n">calculated</span> <span class="o">=</span> <span class="n">current_time_of_day</span><span class="p">(</span><span class="n">tz</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">expected</span> <span class="o">=</span> <span class="s1">&#39;02:00:00&#39;</span>
+    <span class="k">assert</span> <span class="n">calculated</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">calculated</span><span class="si">=}</span><span class="s1"> != </span><span class="si">{</span><span class="n">expected</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RNA</span> <span class="o">=</span> <span class="s1">&#39;AUGUCGGAAAAAGAAAUUUGGGAAAAAGUGCUUGAAAUUGCUCAAGAAAAAUUAUCAGCUGUAAGUUACUCAACUUUCCUAAAAGAUACUGAGCUUUACACGAUUAAAGAUGGUGAAGCUAUCGUAUUAUCGAGUAUUCCUUUUAAUGCAAAUUGGUUAAAUCAACAAUAUGCUGAAAUUAUCCAAGCAAUCUUAUUUGAUGUUGUAGGCUAUGAAGUUAAACCUCACUUUAUUACUACUGAAGAAUUAGCAAAUUAUAGUAAUAAUGAAACUGCUACUCCAAAAGAAACAACAAAACCUUCUACUGAAACAACUGAGGAUAAUCAUGUGCUUGGUAGAGAGCAAUUCAAUGCCCAUAACACAUUUGACACUUUUGUAAUCGGACCCGGUAACCGCUUUCCACAUGCAGCGAGUUUAGCUGUGGCCGAAGCACCAGCCAAAGCGUACAAUCCAUUAUUUAUCUAUGGAGGUGUUGGUUUAGGAAAAACCCAUUUAAUGCAUGCCAUUGGUCAUCAUGUUUUAGAUAAUAAUCCAGAUGCCAAAGUGAUUUACACAUCAAGUGAAAAAUUCACAAAUGAAUUUAUUAAAUCAAUUCGUGAUAACGAAGGUGAAGCUUUCAGAGAAAGAUAUCGUAAUAUCGACGUCUUAUUAAUCGAUGAUAUUCAGUUCAUACAAAACAAGGUACAAACACAAGAAGAAUUUUUCUAUACUUUUAAUGAAUUGCAUCAGAAUAACAAGCAAAUAGUUAUUUCGAGUGAUCGACCACCAAAGGAAAUUGCACAAUUAGAAGACCGAUUACGUUCACGCUUUGAAUGGGGGCUAAUUGUUGAUAUUACGCCACCAGAUUAUGAAACUCGAAUGGCAAUUUUGCAGAAGAAAAUUGAAGAAGAAAAAUUAGAUAUUCCACCAGAAGCUUUAAAUUAUAUAGCAAAUCAAAUUCAAUCUAAUAUUCGUGAAUUAGAAGGUGCAUUAACACGUUUACUUGCAUAUUCACAAUUAUUAGGAAAACCAAUUACAACUGAAUUAACUGCUGAAGCUUUAAAAGAUAUCAUUCAAGCACCAAAAUCUAAAAAGAUUACCAUCCAAGAUAUUCAAAAAAUUGUAGGCCAGUACUAUAAUGUUAGAAUUGAAGAUUUCAGUGCAAAAAAACGUACAAAGUCAAUUGCAUAUCCGCGUCAAAUAGCUAUGUACUUGUCUAGAGAGCUUACAGAUUUCUCAUUACCUAAAAUUGGUGAAGAAUUUGGUGGGCGUGAUCAUACGACCGUCAUUCAUGCUCAUGAAAAAAUAUCUAAAGAUUUAAAAGAAGAUCCUAUUUUUAAACAAGAAGUAGAGAAUCUUGAAAAAGAAAUAAGAAAUGUAUAA&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="part-2">
+<h2>Part 2<a class="headerlink" href="#part-2" title="Link to this heading">#</a></h2>
+<section id="classical-mechanics">
+<h3>Classical mechanics<a class="headerlink" href="#classical-mechanics" title="Link to this heading">#</a></h3>
+<p>The motion of a two-particle system can be decoupled into the motion of a the center-of-mass particle with an effective mass equal to the total mass of the system,</p>
+<div class="math notranslate nohighlight">
+\[ {\bf r}_{cm} = \frac{m_1 {\textbf r}_1 + m_2 {\textbf r}_2}{m_1 + m_2} \qquad m_{tot} = m_1 + m_2\]</div>
+<div class="math notranslate nohighlight">
+\[\]</div>
+<p>and the internal motion of a particle with a reduced mass</p>
+<div class="math notranslate nohighlight">
+\[ {\bf r}_{red} = {\textbf r}_1 -  {\textbf r}_2 \qquad m_{red} = \frac{m_1m_2}{m_1 + m_2}\]</div>
+<p>The bold-face notation <span class="math notranslate nohighlight">\({\textbf r}\)</span> refers to a point in space with <span class="math notranslate nohighlight">\((x, y, z)\)</span> coordinates and the scalar <span class="math notranslate nohighlight">\(m\)</span> to the mass of a particle</p>
+</section>
+<section id="a-particle-class">
+<h3>A Particle class<a class="headerlink" href="#a-particle-class" title="Link to this heading">#</a></h3>
+<p>Construct a class of a particle with  <span class="math notranslate nohighlight">\(x, y, z\)</span>-coordinates and mass <span class="math notranslate nohighlight">\(m\)</span>. Let <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span></code> and <code class="docutils literal notranslate"><span class="pre">m</span></code> be instance attributes of the class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Particle</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class for particle with position and mass</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    <span class="c1">################</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Particle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="k">assert</span> <span class="n">p</span><span class="o">.</span><span class="n">z</span> <span class="o">==</span> <span class="mi">3</span>
+<span class="k">assert</span> <span class="n">p</span><span class="o">.</span><span class="n">m</span> <span class="o">==</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Define a <code class="docutils literal notranslate"><span class="pre">cm</span></code> method for a center-of-mass such that</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">Particle</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Particle</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">r_cm</span> <span class="o">=</span> <span class="n">p1</span><span class="o">.</span><span class="n">cm</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">r_cm</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">r_cm</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">r_cm</span><span class="o">.</span><span class="n">z</span> <span class="o">==</span> <span class="mf">0.5</span>
+<span class="k">assert</span> <span class="n">r_cm</span><span class="o">.</span><span class="n">m</span> <span class="o">==</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Define a reduced particle which satisfies</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">Particle</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Particle</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">r_red</span> <span class="o">=</span> <span class="n">p1</span><span class="o">.</span><span class="n">red</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">r_red</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">r_red</span><span class="o">.</span><span class="n">x</span><span class="si">=}</span><span class="s1"> != 0&#39;</span> 
+<span class="k">assert</span> <span class="n">r_red</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">r_red</span><span class="o">.</span><span class="n">y</span><span class="si">=}</span><span class="s1"> != 0&#39;</span> 
+<span class="k">assert</span> <span class="n">r_red</span><span class="o">.</span><span class="n">z</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">r_red</span><span class="o">.</span><span class="n">z</span><span class="si">=}</span><span class="s1"> != -1&#39;</span> 
+<span class="k">assert</span> <span class="n">r_red</span><span class="o">.</span><span class="n">m</span> <span class="o">==</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="subclass-particle-with-charge">
+<h3>Subclass: particle with charge<a class="headerlink" href="#subclass-particle-with-charge" title="Link to this heading">#</a></h3>
+<p>In this newclass the particle will have an additional attribute: charge, and the electrostatic interaction
+between two charges is given by</p>
+<div class="math notranslate nohighlight">
+\[ V = \frac{q_1 q_2}{|{\textbf r_1} - {\textbf r_2}|} \]</div>
+<p>i.e. the product of the charges divided by the distance</p>
+<p>Have a method <code class="docutils literal notranslate"><span class="pre">coulomb</span></code> in this new subclass that calculates this energy</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ChargedParticle</span><span class="p">(</span><span class="n">Particle</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class for particle with charge</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    <span class="c1">################</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="test-case-hydrogen-atom">
+<h3>Test case: hydrogen atom<a class="headerlink" href="#test-case-hydrogen-atom" title="Link to this heading">#</a></h3>
+<p>The electrostatic interaction between a proton and electron in a hydrogen atom</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q1</span> <span class="o">=</span> <span class="n">ChargedParticle</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="n">ChargedParticle</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">energy</span> <span class="o">=</span> <span class="n">q1</span><span class="o">.</span><span class="n">coulomb</span><span class="p">(</span><span class="n">q2</span><span class="p">)</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="k">assert</span> <span class="n">energy</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">energy</span><span class="si">=}</span><span class="s1"> != </span><span class="si">{</span><span class="n">expected</span><span class="si">=}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="part-3">
+<h2>Part 3<a class="headerlink" href="#part-3" title="Link to this heading">#</a></h2>
+<p>Given a DNA string write a generator that yield the characters in groups of three (codons).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">codons</span><span class="p">(</span><span class="n">dna</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Yield the codons of a DNA/RNA string</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; for c in codons(&#39;GCAGCC&#39;))</span>
+<span class="sd">    ...      print(c)</span>
+<span class="sd">    GCA</span>
+<span class="sd">    GCC</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    <span class="c1">################</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Verify that this is a generator</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verify type</span>
+<span class="n">class_name</span> <span class="o">=</span> <span class="n">codons</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+<span class="k">assert</span> <span class="n">class_name</span> <span class="o">==</span> <span class="s1">&#39;generator&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">class_name</span><span class="si">=}</span><span class="s1"> != generator&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Verify some values in a defined string</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RNA</span> <span class="o">=</span> <span class="s1">&#39;AUGUCGGAAAAAGAAAUUUGGGAAAAAGUGCUUGAAAUUGCUCAAGAAAAAUUAUCAGCUGUAAGUUACUCAACUUUCCUAAAAGAUACUGAGCUUUACACGAUUAAAGAUGGUGAAGCUAUCGUAUUAUCGAGUAUUCCUUUUAAUGCAAAUUGGUUAAAUCAACAAUAUGCUGAAAUUAUCCAAGCAAUCUUAUUUGAUGUUGUAGGCUAUGAAGUUAAACCUCACUUUAUUACUACUGAAGAAUUAGCAAAUUAUAGUAAUAAUGAAACUGCUACUCCAAAAGAAACAACAAAACCUUCUACUGAAACAACUGAGGAUAAUCAUGUGCUUGGUAGAGAGCAAUUCAAUGCCCAUAACACAUUUGACACUUUUGUAAUCGGACCCGGUAACCGCUUUCCACAUGCAGCGAGUUUAGCUGUGGCCGAAGCACCAGCCAAAGCGUACAAUCCAUUAUUUAUCUAUGGAGGUGUUGGUUUAGGAAAAACCCAUUUAAUGCAUGCCAUUGGUCAUCAUGUUUUAGAUAAUAAUCCAGAUGCCAAAGUGAUUUACACAUCAAGUGAAAAAUUCACAAAUGAAUUUAUUAAAUCAAUUCGUGAUAACGAAGGUGAAGCUUUCAGAGAAAGAUAUCGUAAUAUCGACGUCUUAUUAAUCGAUGAUAUUCAGUUCAUACAAAACAAGGUACAAACACAAGAAGAAUUUUUCUAUACUUUUAAUGAAUUGCAUCAGAAUAACAAGCAAAUAGUUAUUUCGAGUGAUCGACCACCAAAGGAAAUUGCACAAUUAGAAGACCGAUUACGUUCACGCUUUGAAUGGGGGCUAAUUGUUGAUAUUACGCCACCAGAUUAUGAAACUCGAAUGGCAAUUUUGCAGAAGAAAAUUGAAGAAGAAAAAUUAGAUAUUCCACCAGAAGCUUUAAAUUAUAUAGCAAAUCAAAUUCAAUCUAAUAUUCGUGAAUUAGAAGGUGCAUUAACACGUUUACUUGCAUAUUCACAAUUAUUAGGAAAACCAAUUACAACUGAAUUAACUGCUGAAGCUUUAAAAGAUAUCAUUCAAGCACCAAAAUCUAAAAAGAUUACCAUCCAAGAUAUUCAAAAAAUUGUAGGCCAGUACUAUAAUGUUAGAAUUGAAGAUUUCAGUGCAAAAAAACGUACAAAGUCAAUUGCAUAUCCGCGUCAAAUAGCUAUGUACUUGUCUAGAGAGCUUACAGAUUUCUCAUUACCUAAAAUUGGUGAAGAAUUUGGUGGGCGUGAUCAUACGACCGUCAUUCAUGCUCAUGAAAAAAUAUCUAAAGAUUUAAAAGAAGAUCCUAUUUUUAAACAAGAAGUAGAGAAUCUUGAAAAAGAAAUAAGAAAUGUAUAA&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">codons</span><span class="p">(</span><span class="n">RNA</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;AUG&#39;</span>
+<span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">codons</span><span class="p">(</span><span class="n">RNA</span><span class="p">))[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;UAA&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="count">
+<h3>Count<a class="headerlink" href="#count" title="Link to this heading">#</a></h3>
+<p>Look up the <code class="docutils literal notranslate"><span class="pre">Counter</span></code> class in the <code class="docutils literal notranslate"><span class="pre">collections</span></code> module. It has a method <code class="docutils literal notranslate"><span class="pre">most_common</span></code>. Write a wrapper to that function so you get the most common codon and its count in the string</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; most_common_codon(&#39;AAAGGGAAA&#39;)
+(&#39;AAA&#39;, 2)
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="k">def</span> <span class="nf">most_common_codon</span><span class="p">(</span><span class="n">dna</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the most common codon with its count</span>
+<span class="sd">    &gt;&gt;&gt; most_common_codon(&#39;AAAGGGAAA&#39;)</span>
+<span class="sd">    (&#39;AAA&#39;, 2)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    <span class="c1">################</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">most_common_codon</span><span class="p">(</span><span class="s1">&#39;AAAGGGAAA&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;AAA&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">most_common_codon</span><span class="p">(</span><span class="n">RNA</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;GAA&#39;</span><span class="p">,</span> <span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="search">
+<h3>Search<a class="headerlink" href="#search" title="Link to this heading">#</a></h3>
+<p>Write a function to search for a given substring and return the number (counting codons) of the first match according to</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; find_codon(&#39;AAA&#39;  &#39;AAAGGG&#39;)
+0
+&gt;&gt;&gt; find_codon(&#39;GGG&#39;, &#39;AAAGGG&#39;)
+1
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_codon</span><span class="p">(</span><span class="n">codon</span><span class="p">,</span> <span class="n">dna</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; find_codon(&#39;AAA&#39;  &#39;AAAGGG&#39;)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; find_codon(&#39;GGG&#39;, &#39;AAAGGG&#39;)</span>
+<span class="sd">    1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># YOUR CODE HERE</span>
+    <span class="c1">################</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">find_codon</span><span class="p">(</span><span class="s1">&#39;AUG&#39;</span><span class="p">,</span> <span class="n">RNA</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">find_codon</span><span class="p">(</span><span class="s1">&#39;GAA&#39;</span><span class="p">,</span> <span class="n">RNA</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1">Part 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-digital-clock">A digital clock</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-return-type">Verify return type</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-before-after-midnight">Verify before/after midnight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-handling-of-fractional-seconds">Verify handling of fractional seconds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#include-optional-timezone">Include optional timezone</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical mechanics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-particle-class">A Particle class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subclass-particle-with-charge">Subclass: particle with charge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-case-hydrogen-atom">Test case: hydrogen atom</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3">Part 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#count">Count</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search">Search</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
